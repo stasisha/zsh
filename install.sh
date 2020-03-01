@@ -1,10 +1,6 @@
 #!/bin/bash
 
-addLineToTopIfNotExists() {
-  local LINE=$1
-  local FILE=$2
-  sudo grep -qF -- "$LINE" "$FILE" || echo -e  "$LINE""\n$(cat todo.txt)" > todo.txt
-}
+source <(curl -s https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)
 
 brew install fzf
 
@@ -13,9 +9,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 curl -L https://raw.githubusercontent.com/stasisha/zsh/master/.appearance -o ~/.appearance
 
-addLineToTopIfNotExists "source ~/.appearance" ~/.zshrc
+addLineBeforeLineIfNotExists "source ~/.appearance" "source $ZSH/oh-my-zsh.sh" ~/.zshrc
 
 #oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 source ~/.zshrc
