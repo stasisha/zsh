@@ -1,4 +1,6 @@
-plugins=(osx common-aliases gitfast sublime brew composer docker jsontools npm fzf-zsh)
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+plugins=(osx common-aliases gitfast sublime brew composer docker jsontools npm fzf)
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
