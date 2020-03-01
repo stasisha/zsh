@@ -1,4 +1,4 @@
-ZSH auto config
+ZSH auto install and config
 ==================================================
 How to run
 ----------------------------
