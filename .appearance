@@ -1,0 +1,10 @@
+plugins=(osx common-aliases gitfast sublime brew composer docker jsontools npm fzf-zsh)
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+POWERLEVEL9K_MODE='nerdfont-complete'
