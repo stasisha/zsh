@@ -9,10 +9,9 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 curl -L https://raw.githubusercontent.com/stasisha/zsh/master/.appearance -o ~/.appearance
 
-addLineBeforeLineIfNotExists "source ~/.appearance" "source $ZSH/oh-my-zsh.sh" ~/.zshrc
-
 #oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+addLineBeforeLineIfNotExists "source ~/.appearance" "source $ZSH/oh-my-zsh.sh" ~/.zshrc
 
 source ~/.zshrc
