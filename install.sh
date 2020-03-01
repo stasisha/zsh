@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source <(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)
+source /dev/stdin <<< "$(curl --insecure https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)";
 
 brew install fzf
 
