@@ -11,7 +11,7 @@ else
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
-if [ -d "~/powerlevel10k" ]; then
+if [ -d "${ZSH_CUSTOM}/themes/powerlevel10k" ]; then
     git -C ~/powerlevel10k pull
 else
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
