@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)";
 source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/brew.sh)";
 
 brew-install-if-not-installed "fzf"
