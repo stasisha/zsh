@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)";
