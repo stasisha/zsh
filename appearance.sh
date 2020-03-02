@@ -6,15 +6,15 @@ source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/b
 brew-install-if-not-installed "fzf"
 
 if [ -d "~/.oh-my-zsh/custom/themes/powerlevel9k" ]; then
-    git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull
-else
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+else
+    git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull
 fi
 
 if [ -d "${ZSH_CUSTOM}/themes/powerlevel10k" ]; then
-    git -C ~ZSH_CUSTOM/themes/powerlevel10k pull
-else
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+else
+    git -C ~ZSH_CUSTOM/themes/powerlevel10k pull
 fi
 
 curl -L https://raw.githubusercontent.com/stasisha/zsh/master/.appearance.sh -o ~/.appearance.sh
