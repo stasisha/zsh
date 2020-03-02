@@ -11,6 +11,12 @@ else
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
+if [ -d "~/powerlevel10k" ]; then
+    git -C ~/powerlevel10k pull
+else
+   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+fi
+
 curl -L https://raw.githubusercontent.com/stasisha/zsh/master/.appearance -o ~/.appearance
 
 #oh-my-zsh
@@ -22,13 +28,7 @@ fi
 rm -f ~/.zshrc
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
-removeLine 'source $ZSH\/oh-my-zsh.sh' ~/.zshrc
-addLineToBottomIfNotExists 'source ~/.appearance' ~/.zshrc
-addLineToBottomIfNotExists 'source $ZSH/oh-my-zsh.sh' ~/.zshrc
-
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 cd -
-
-echo "Select DroidSansMono Nerd Font in iterm2 Preferences."
 
 zsh -l
