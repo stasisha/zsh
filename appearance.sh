@@ -8,3 +8,6 @@ addLineToBottomIfNotExists 'source ~/.appearance' ~/.zshrc
 addLineToBottomIfNotExists 'source $ZSH/oh-my-zsh.sh' ~/.zshrc
 
 echo "Select DroidSansMono Nerd Font in iterm2 Preferences."
+
+zsh -l
+
