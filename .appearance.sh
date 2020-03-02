@@ -3,7 +3,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(osx common-aliases gitfast sublime brew composer docker jsontools npm fzf)
 
 typeset -g POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-typeset -g POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # The list of segments shown on the left. Fill it with the most important segments.
@@ -12,7 +11,7 @@ typeset -ga POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
-    prompt_char             # prompt symbol
+    #prompt_char             # prompt symbol
 )
 
   # The list of segments shown on the right. Fill it with less important segments.
@@ -23,8 +22,6 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     command_execution_time  # duration of the last command
     status                  # exit code of the last command
-
-
     # anaconda                # conda environment (https://conda.io/)
     # pyenv                   # python environment (https://github.com/pyenv/pyenv)
     # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
@@ -122,12 +119,12 @@ typeset -g POWERLEVEL9K_MODE='nerdfont-complete'
 # '─'. The last two make it easier to see the alignment between left and right prompt and to
 # separate prompt from command output. You might want to set POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 # for more compact prompt if using using this option.
-typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
+typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR='.'
 typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_BACKGROUND=
 if [[ $POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR != ' ' ]]; then
   # The color of the filler. You'll probably want to match the color of POWERLEVEL9K_MULTILINE
   # ornaments defined above.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND=black
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND=grey
   # Start filler from the edge of the screen if there are no left segments on the first line.
   typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_FIRST_SEGMENT_END_SYMBOL='%{%}'
   # End filler on the edge of the screen if there are no right segments on the first line.
@@ -350,7 +347,7 @@ typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='↵'
 typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
 typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=red
 # Use terse signal names: "INT" instead of "SIGINT(2)".
-typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
+typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=true
 typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='↵'
 
 # Status when some part of a pipe command fails and the overall exit status is also non-zero.
@@ -572,3 +569,4 @@ typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION=
 # User-defined prompt segments can be customized the same way as built-in segments.
 typeset -g POWERLEVEL9K_EXAMPLE_FOREGROUND=208
 typeset -g POWERLEVEL9K_EXAMPLE_VISUAL_IDENTIFIER_EXPANSION='${P9K_VISUAL_IDENTIFIER}'
+
