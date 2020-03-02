@@ -14,8 +14,7 @@ fi
 if [ -d "~/powerlevel10k" ]; then
     git -C ~/powerlevel10k pull
 else
-   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-   addLineToBottomIfNotExists 'source ~/powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 fi
 
 curl -L https://raw.githubusercontent.com/stasisha/zsh/master/.appearance.sh -o ~/.appearance.sh
