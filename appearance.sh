@@ -1,6 +1,9 @@
 #!/bin/bash
 
 source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/file-edit.sh)";
+source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/stasisha/bash-utils/master/brew.sh)";
+
+brew-install-if-not-installed "fzf"
 
 if [ -d "~/.oh-my-zsh/custom/themes/powerlevel9k" ]; then
     git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull
