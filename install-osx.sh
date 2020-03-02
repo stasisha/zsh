@@ -8,12 +8,8 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 cd -
 
 #oh-my-zsh
-if [ -d "~/.oh-my-zsh" ]; then
-    git -C ~/.oh-my-zsh pull
-else
-    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+if [ ! -d "~/.oh-my-zsh" ]; then
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-rm -f ~/.zshrc
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 zsh -l
